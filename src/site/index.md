@@ -9,7 +9,7 @@ layout: layouts/home.njk
 
 
 ## I Love CSS
-There is something so delightful and enjoyable about designing with code that other mediums cannot give me
+There is something so delightful and enjoyable about designing with code that for me, other mediums cannot provide
 <!-- - [Eleventy](https://11ty.io) with a skeleton site -->
 <!--
 ## Post pages
