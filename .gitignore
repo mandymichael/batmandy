@@ -4,3 +4,6 @@ functions
 src/site/_includes/css
 .env
 yarn-error.log
+src/.DS_Store
+src/site/.DS_Store
+src/site/images/.DS_Store

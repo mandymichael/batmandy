@@ -1,0 +1,163 @@
+@import '_mixins';
+
+// Text styling
+.page-subtitle {
+    font-size: calcRem(22px);
+	font-weight: 900;
+	text-transform: uppercase;
+    line-height: 1;
+    font-family: $sans;
+    color: transparent;
+    position: relative;
+
+	&:focus {
+		outline: none;
+    }
+
+    &::before, &::after {
+        content: attr(data-heading);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &::before {
+        color: #4901e6;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 0 60%);
+    }
+
+    &::after {
+        color: #6F39E6;
+        clip-path: polygon(0 0, 100% 0%, 100% 36%, 0 56%);
+    }
+ }
+
+.batmandy {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    background: $accent-color;
+    overflow: hidden;
+    shape-outside: circle(55% at center center);
+
+    img {
+        width: 100%;
+    }
+
+    @include bp('wide') {
+        float: right;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.jello {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: $accent-color;
+    overflow: hidden;
+    float: left;
+    shape-outside: circle(55% at center center);
+    position: relative;
+    margin: 5px;
+
+    @include bp('wide') {
+        width: 100px;
+        height: 100px;
+    }
+
+    img {
+        width: 80%;
+        position: absolute;
+        bottom: -8px;
+    }
+}
+
+p.fact-description {
+    font-family: $sans;
+    font-size: calcRem(18px);
+    color: white;
+    text-transform: none;
+    line-height: 1.2;
+
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+        grid-template-areas:
+          "fact1"
+          "description"
+          "description2"
+          "fact2";
+    grid-gap: 20px;
+
+    @include bp('768') {
+        padding: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          ". fact1 description ."
+          " . . . ."
+          ". description2 fact2 ."
+    }
+
+    .fact1  {
+        padding: 1rem;
+        @include bp('768') {
+            padding: 0;
+            grid-area: fact1;
+        }
+    }
+
+    .description {
+        font-family: 'Times New Roman', serif;
+        color: white;
+        font-size: calcRem(16px);
+        line-height: 1.4;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        padding: 1rem;
+
+        @include bp('768') {
+            align-self: flex-end;
+            grid-area: description;
+        }
+    }
+
+    .fact2 {
+        padding: 1rem;
+
+        @include bp('768') {
+            grid-area: fact2;
+            padding: 0;
+        }
+
+        h2 {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        p.fact-description {
+            font-size: calcRem(16px);
+        }
+    }
+
+    .description1 {
+
+        @include bp('768') {
+            align-self: flex-end;
+            grid-area: description;
+        }
+    }
+
+    .description2{
+        @include bp('768') {
+            align-self: flex-end;
+            grid-area: description2;
+        }
+    }
+}

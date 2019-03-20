@@ -1,0 +1,41 @@
+.intro {
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 2rem 0;
+    height: 221px;
+    padding: 0 1rem;
+    z-index: 1;
+    position: relative;
+
+    @include bp('768') {
+        padding: 0;
+        grid-template-columns: 519px 200px auto;
+    }
+
+    .grid-item {
+        @include bp('768') {
+            grid-column: 2 / span 1;
+            align-self: end;
+        }
+    }
+
+    p {
+        font-family: 'Times New Roman', serif;
+        color: white;
+        font-size: calcRem(19px);
+        line-height: 1;
+
+        &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #4801E6;
+            border-radius: 50%;
+            display: inline-block;
+            transform: translate(50%, 21%);
+        }
+    }
+}
+
+

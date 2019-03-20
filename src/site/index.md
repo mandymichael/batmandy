@@ -1,22 +1,17 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.
-layout: layouts/base.njk
+title: Mandy
+subtitle: Mandy Michael
+description: sometimes a speaker, sometimes a manager, sometimes an organiser but mostly a...
+jobtitle: Front End
+jobtitle2: Developer.
+layout: layouts/home.njk
 ---
 
 
-## This site is a starting point
-
-From this point we should already have:
-
-- [Eleventy](https://11ty.io) with a skeleton site
-- A date format filter for Nunjucks
-- A tiny inline Sass pipeline
-- A tiny inline JS pipeline. (<a href="#" class="btn-log">Test a console.log message</a>)
-- JS [search index](/search.json) generator
-- Serverless (FaaS) development pipeline with Netlify Functions for Lambda
-
-
+## I Love CSS
+There is something so delightful and enjoyable about designing with code that other mediums cannot give me
+<!-- - [Eleventy](https://11ty.io) with a skeleton site -->
+<!--
 ## Post pages
 
 The pages found in in the posts
@@ -55,5 +50,5 @@ It will then be available locally for building with:
 yarn start
 ```
 
-
+ -->
 

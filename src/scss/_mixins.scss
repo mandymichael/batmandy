@@ -2,10 +2,19 @@
   @if $point == narrow {
     @media #{$bp-narrow} { @content; }
   }
+  @else if $point == '768' {
+    @media #{$bp-768} { @content; }
+  }
   @else if $point == mid {
     @media #{$bp-mid} { @content; }
   }
   @else if $point == wide {
     @media #{$bp-wide}  { @content; }
   }
+}
+
+
+@function calcRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
 }

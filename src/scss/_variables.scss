@@ -1,9 +1,21 @@
 // Breakpoints
 $bp-narrow: "(min-width: 400px)";
-$bp-mid: "(min-width: 740px)";
+$bp-768: "(min-width: 768px)";
+$bp-mid: "(min-width: 920px)";
 $bp-wide: "(min-width: 1200px)";
 
 // Colours
-$page-color: #385780;
+$page-color: #100820;
 $text-color: #fff;
-$accent-color: #213b5c;
+$accent-color: #01DFE6;
+
+$secondary-color: #6f4ce9;
+$secondary-color-bright: #4801E6;
+
+
+// margins/ sizing
+$content-width: calcRem(768px);
+
+
+// Fonts
+$sans: "Arial Black", Arial, sans-serif;

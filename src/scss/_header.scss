@@ -1,0 +1,74 @@
+@import '_mixins';
+@import '_variables';
+
+$offset: 120px;
+
+header {
+    overflow:hidden;
+}
+
+.heading-wrapper {
+    background-size: 130px 300px;
+    background-image: repeating-linear-gradient(-55deg, #10081f, #10081f $offset, #4a00e8 $offset, #100821);
+    background-repeat: repeat-x;
+    height: 300px;
+
+}
+
+.heading {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+	font-weight: normal;
+    text-shadow: 0 0 5px #100821;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-size: 20vw;
+	width: 100%;
+	text-align: center;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	background-size: 130px 300px;
+	background-image: repeating-linear-gradient(-55deg, #15033d, #4a00e8 $offset, #100821 $offset, #100821);
+    background-repeat: repeat-x;
+
+    @include bp(mid) {
+        font-size: 180px;
+    }
+}
+
+
+.description {
+    max-width: $content-width;
+    margin:  0 auto;
+    padding: 0 1rem;
+    font-family: $sans;
+    font-weight: 400;
+    color: white;
+    z-index: 1;
+    position: relative;
+
+}
+
+.subtitle {
+    font-size: calcRem(19px);
+    color: $accent-color;
+    text-transform: uppercase;
+}
+
+.subtitle-summary {
+    font-size: calcRem(18px);
+    font-family: 'Times New Roman', serif;
+    max-width: 300px;
+    line-height: 1.25;
+}
+
+.jobtitle {
+    font-size: calcRem(29px);
+    text-transform: uppercase;
+    line-height: 1;
+
+    span {
+        color: $secondary-color;
+    }
+}
